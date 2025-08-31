@@ -11,13 +11,45 @@
 */
 
 .page {
+  display: flex;
   min-inline-size: 320px;
   min-block-size: 100dvb;
-  font-family: ver(--main-font-family, sans-serif);
+  font-family: var(--main-font-family, sans-serif);
   font-variation-settings: 'wght' var(--weight-card-text);
   background-image: var(--background-image);
-   background-repeat: no-repeat;
+  background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  
 }
+
+.header {
+  font-family: var(--accent-font-family, sans-serif);
+  display: grid;
+  justify-content: center;
+  background-color: white;
+  padding: clamp(7.5rem, 7.3239rem + 0.7512vw, 8rem);
+  border: var(--accent-color) solid 2px;
+  margin-block-start: 100px;
+  margin-block-end: 100px;
+  
+}
+
+.header__title {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+  line-height: 100%;
+}
+
+.header__subtitle {
+  font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
+  justify-self: center;
+  padding-block-start: 20px;
+  text-transform: uppercase;
+  line-height: 100%;
+
+
+}
+
+
+
