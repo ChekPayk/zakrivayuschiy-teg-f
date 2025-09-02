@@ -23,7 +23,6 @@
   background-position: center;
   background-attachment: fixed;
   flex-direction: column;
-  align-items: center;
 }
 
 .header {
@@ -287,17 +286,12 @@
   }
 }
 
-/* .button-container {
+.button-container {
   text-align: center;
 }
 
-.footer-btn {
-  inline-size: 100%;
-  margin-block: 0 50px;
-} */
-
 .save-btn {
-  /* inline-size: clamp(306px, calc(306px + 0.0272 * (100vw - 375px)), 335px); */
+  inline-size: clamp(306px, calc(306px + 0.0272 * (100vw - 375px)), 335px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -308,25 +302,12 @@
   padding: 16px 1px 15px 0;
 }
 
-/* .button__text-in-footer {
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 9px;
-  position: relative;
-  z-index: 2;
-} */
-
 .button__icon {
-  /* width: 21px;
-  height: 21px; */
   color: black;
   z-index: 1;
   position: relative;
   display: block;
   mix-blend-mode: normal;
-  margin-block-end: 1px;
   block-size: clamp(1.3125rem, 1.904rem + -0.6573vw, 1.75rem);
   inline-size: clamp(1.3125rem, 1.904rem + -0.6573vw, 1.75rem);
 }
@@ -370,4 +351,63 @@
 .dialog-window__close-btn {
   text-transform: uppercase;
   inline-size: 100%;
+}
+
+@media (width < 376px) {
+  .header {
+    margin-block-end: 100px;
+  }
+
+  .card__title {
+    line-height: 120%;
+    padding-block: 4px 4px;
+  }
+
+  .card__text {
+    gap: 25px;
+  }
+
+  .save-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 17px 20px;
+    inline-size: 90%;
+    max-inline-size: 306px;
+    block-size: auto;
+    box-sizing: border-box;
+  }
+
+  .save-btn .floppy-icon {
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .save-btn .button__text {
+    margin: 0;
+    line-height: 1.2;
+    font-size: 14px;
+    text-align: center;
+    white-space: normal;
+  }
+
+  .button__icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .floppy-icon {
+    display: inline-block;
+  }
+
+  #dialog-id {
+    min-inline-size: 92%;
+    padding-block: 30px;
+    padding-inline: 40px;
+  }
 }
