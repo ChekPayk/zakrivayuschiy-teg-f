@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
-    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" >
-    <link rel="icon" href="./images/favicon.png" type="image/png" sizes="any" >
+    <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="./images/favicon.png" type="image/png" sizes="any" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
     <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
@@ -510,6 +510,51 @@
           </article>
         </li>
       </ul>
+
+      <div>
+        <button
+          class="save-btn btn"
+          type="button"
+          onclick="window['dialog-id'].showModal()"
+          aria-controls="dialog-id"
+        >
+          <svg
+            class="button__icon"
+            viewBox="0 0 21 21"
+            width="100%"
+            fill="white"
+            height="100%"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <span class="button__text">Сохранить на память</span>
+        </button>
+      </div>
+
+      <dialog id="dialog-id">
+        <div class="dialog-window">
+          <svg
+            class="dialog-window__icon"
+            viewBox="0 0 40 40"
+            width="39"
+            height="39"
+          >
+            <use href="./svg/floppy.svg#floppy"></use>
+          </svg>
+          <p class="dialog-window__text">
+            Вставьте<br />
+            дискету, чтобы<br />
+            продолжить
+          </p>
+        </div>
+        <button
+          class="dialog-window__close-btn btn"
+          type="button"
+          onclick="window['dialog-id'].close()"
+        >
+          <span class="button__text">OK</span>
+        </button>
+      </dialog>
     </main>
 
     <script src="./scripts/like.js"></script>
