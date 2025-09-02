@@ -171,6 +171,12 @@
   background-color: black;
   transition: transform 0.5s ease-in-out;
   z-index: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.btn:hover::before {
+  transform: scaleX(1);
 }
 
 .btn:focus-visible {
@@ -315,7 +321,7 @@
 .button__icon {
   /* width: 21px;
   height: 21px; */
-  fill: black;
+  color: black;
   z-index: 1;
   position: relative;
   display: block;
@@ -327,6 +333,16 @@
 
 .btn:hover .button__icon {
   fill: white;
+}
+
+.save-btn .floppy-icon {
+  filter: invert(0%);
+  transition: filter 0.3s ease;
+  z-index: 2;
+}
+
+.save-btn:hover .floppy-icon {
+  filter: invert(100%);
 }
 
 .dialog-window {
