@@ -23,6 +23,7 @@
   background-position: center;
   background-attachment: fixed;
   flex-direction: column;
+  align-items: center;
 }
 
 .header {
@@ -34,6 +35,8 @@
   border: var(--accent-color) solid 2px;
   margin-block-start: 100px;
   margin-block-end: 100px;
+  width: clamp(23.438rem, 16.285rem + 30.52vw, 43.75rem);
+  justify-self: center;
 }
 
 .header__title {
@@ -69,7 +72,6 @@
 
 .card__title {
   font-variation-settings: "wght" var(--weight-title);
-  line-height: 100%;
   padding: 4px 10px 4px 10px;
   font-size: 18px;
   font-family: var(--main-font-family, sans-serif);
@@ -170,8 +172,6 @@
   background-color: black;
   transition: transform 0.5s ease-in-out;
   z-index: 1;
-  transform: scaleX(0);
-  transform-origin: left;
 }
 
 .btn:hover::before {
@@ -297,7 +297,6 @@
   align-items: center;
   margin: 50px auto 100px;
   gap: 8px;
-  inline-size: 335px;
   block-size: 55px;
   padding: 16px 1px 15px 0;
 }
@@ -351,6 +350,34 @@
 .dialog-window__close-btn {
   text-transform: uppercase;
   inline-size: 100%;
+}
+
+.filter-contrast {
+  filter: contrast(300%);
+}
+
+.filter-drop-shadow {
+  filter: drop-shadow(10px 30px 6px rgba(0, 0, 0, 0.5));
+}
+
+.filter-grayscale {
+  filter: grayscale(1);
+}
+
+.filter-saturate {
+  filter: saturate(1000%);
+}
+
+.filter-sepia {
+  filter: sepia(80%);
+}
+
+.filter-invert {
+  filter: invert(1);
+}
+
+.filter-blur {
+  filter: hue-rotate(180deg) blur(0.15rem);
 }
 
 @media (width < 376px) {
