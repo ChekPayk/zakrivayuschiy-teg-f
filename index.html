@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Закрывающий тег</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/ico" sizes="any" />
+    <link rel="apple-touch-icon" href="./imges/favicon.png" sizes="180x180" />
     <link rel="icon" href="./images/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="./images/favicon.png" type="image/png" sizes="any" />
     <link rel="stylesheet" href="./fonts/fonts.css" />
@@ -515,8 +517,8 @@
         <button
           class="save-btn btn"
           type="button"
-          onclick="window['dialog-id'].showModal()"
-          aria-controls="dialog-id"
+          onclick="window['dialog'].showModal()"
+          aria-controls="dialog"
         >
           <svg
             class="button__icon floppy-icon"
@@ -530,7 +532,7 @@
         </button>
       </div>
 
-      <dialog id="dialog-id">
+      <dialog id="dialog">
         <div class="dialog-window">
           <svg
             class="dialog-window__icon"
@@ -540,11 +542,7 @@
           >
             <use href="./svg/floppy.svg#floppy"></use>
           </svg>
-          <p class="dialog-window__text">
-            Вставьте<br />
-            дискету, чтобы<br />
-            продолжить
-          </p>
+          <p class="dialog-window__text">Вставьт дискету, чтобы продолжить</p>
         </div>
         <button
           class="dialog-window__close-btn btn"

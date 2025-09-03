@@ -1,6 +1,6 @@
 :root {
-  --main-font-family: "Inter-Variable";
-  --accent-font-family: "PressStart2P";
+  --main-font-family: "Inter-Variable", sans-serif;
+  --accent-font-family: "PressStart2P", fantasy;
   --weight-title: 715;
   --weight-card-text: 410;
   --background-image: repeating-linear-gradient(
