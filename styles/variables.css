@@ -22,4 +22,5 @@
   --button-color: white;
   --button-background: white;
   --animation-like-color: red;
+  --backdrop-background-color: rgba(0 0 0 / 0.75);
 }
